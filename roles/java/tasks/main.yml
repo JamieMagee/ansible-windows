@@ -1,0 +1,27 @@
+---
+# OpenJDK 8
+- name: Install OpenJDK 8
+  win_chocolatey:
+    name: adoptopenjdk8
+
+# LTS release
+- name: Install OpenJDK 11
+  win_chocolatey:
+    name: adoptopenjdk11
+
+# Current release
+- name: Install OpenJDK 12
+  win_chocolatey:
+    name: adoptopenjdk
+
+- name: Install maven
+  win_chocolatey:
+    name: maven
+
+- name: Install gradle
+  win_chocolatey:
+    name: gradle
+
+- name: Install jetty
+  win_chocolatey:
+    name: jetty

@@ -1,0 +1,11 @@
+---
+all:
+  vars:
+    ansible_user: jamagee@EUROPE.CORP.MICROSOFT.COM
+    ansible_connection: winrm
+    ansible_winrm_transport: kerberos
+    ansible_winrm_server_cert_validation: ignore
+  children:
+    work:
+      hosts:
+        crmdevvm-0098:

@@ -1,0 +1,7 @@
+---
+- hosts: work
+  roles:
+    - { role: timezone, tags: ["timezone"] }
+    - { role: base, tags: ["base"] }
+    # - { role: wsl, tags: ['wsl'] }
+    - { role: java, tags: ["java"] }

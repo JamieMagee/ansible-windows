@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "ansible-win"
+version = "0.1.0"
+description = ""
+authors = ["Jamie Magee <jamie.magee@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+pywinrm = "^0.3.0"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
