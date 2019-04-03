@@ -1,4 +1,6 @@
 ---
+- include: shortcuts.yml
+
 # - name: Copy the wallpaper
 #   win_copy:
 #     src: background.jpg
