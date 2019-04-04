@@ -1,0 +1,29 @@
+---
+- name: Download debloat script
+  win_get_url:
+    url: https://github.com/Disassembler0/Win10-Initial-Setup-Script/archive/master.zip
+    dest: C:\Users\jamagee\Downloads\debloat.zip
+
+- name: Extract debloat script
+  win_unzip:
+    src: C:\Users\jamagee\Downloads\debloat.zip
+    dest: C:\Users\jamagee\Downloads\
+    delete_archive: true
+
+- name: Execute debloat script
+  win_command: |
+    powershell.exe -NoProfile -ExecutionPolicy Bypass -File Win10.ps1 \
+    -include Win10.psm1 \
+    -preset Default.preset
+    SetP2PUpdateLocal \
+    EnableTitleBarColor \
+    ShowDocumentsInThisPC \
+    ShowDownloadsInThisPC \
+    ShowPicturesInThisPC \
+    UnpinStartMenuTiles \
+    UnpinTaskbarIcons
+  args:
+    chdir: C:\Users\jamagee\Downloads\Win10-Initial-Setup-Script-master
+
+- name:
+  win_reboot:
