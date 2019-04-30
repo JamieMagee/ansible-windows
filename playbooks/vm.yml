@@ -4,7 +4,13 @@
     - { role: timezone, tags: ['timezone'] }
     - { role: base, tags: ['base'] }
     - { role: fonts, tags: ['fonts'] }
+    - { role: browsers, tags: ['browsers'] }
     - { role: wsl, tags: ['wsl'] }
     - { role: java, tags: ['java'] }
+    - { role: node, tags: ['node'] }
     - { role: office, tags: ['office'] }
+    - { role: vscode, tags: ['vscode'] }
+    - { role: intellij, tags: ['intellij'] }
+    - { role: visualstudio, tags: ['visualstudio'] }
     - { role: docker, tags: ['docker'] }
+    - { role: k8s, tags: ['k8s'] }

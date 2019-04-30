@@ -1,0 +1,10 @@
+---
+- name: Install vscode
+  win_scoop:
+    name: vscode
+
+- name: install extensions
+  win_shell: code --install-extension '{{ item }}'
+  loop: "{{ vscode_extensions }}"
+  register: vscode_result
+  changed_when: "'already installed' not in vscode_result.stdout"

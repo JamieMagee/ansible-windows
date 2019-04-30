@@ -1,0 +1,14 @@
+---
+- name: Install Node.js
+  win_scoop:
+    name:
+      - nodejs
+      - nodejs-lts
+
+- name: Install yarn
+  win_scoop:
+    name: yarn
+
+- name: Install cli tools
+  win_scoop:
+    

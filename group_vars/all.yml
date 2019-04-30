@@ -1,6 +1,7 @@
 ---
 user:
   name: jamagee
+
 base_packages:
   - 7zip
   - aria2
@@ -19,3 +20,29 @@ base_packages:
   - win32-openssh
   - zip
 
+vscode_extensions:
+  - DavidAnson.vscode-markdownlint
+  - Equinusocio.vsc-material-theme
+  - Equinusocio.vsc-material-theme-icons
+  - Orta.vscode-jest
+  - PeterJausovec.vscode-docker
+  - eamodio.gitlens
+  - eg2.tslint
+  - esbenp.prettier-vscode
+  - formulahendry.auto-rename-tag
+  - foxundermoon.shell-format
+  - gio00.fish
+  - James-Yu.latex-workshop
+  - jithurjacob.nbpreviewer
+  - dotjoshjohnson.xml
+  - lunaryorn.fish-ide
+  - ms-azuretools.vscode-azurefunctions
+  - ms-python.python
+  - ms-vscode.azure-account
+  - ms-vscode.csharp
+  - ms-vscode.mono-debug
+  - ms-vscode.PowerShell
+  - pnp.polacode
+  - redhat.vscode-yaml
+  - streetsidesoftware.code-spell-checker
+  - vscoss.vscode-ansible

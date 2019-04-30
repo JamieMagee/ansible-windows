@@ -1,0 +1,4 @@
+---
+- name: Install chromium
+  win_scoop:
+    name: chromium
