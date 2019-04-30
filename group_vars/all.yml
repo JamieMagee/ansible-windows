@@ -1,0 +1,21 @@
+---
+user:
+  name: jamagee
+base_packages:
+  - 7zip
+  - aria2
+  - cmder
+  - coreutils
+  - curl
+  - git
+  - jq
+  - less
+  - nano
+  - psutils
+  - ripgrep
+  - sed
+  - unzip
+  - wget
+  - win32-openssh
+  - zip
+
