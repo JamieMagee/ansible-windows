@@ -1,27 +1,21 @@
 ---
-# OpenJDK 8
-- name: Install OpenJDK 8
-  win_chocolatey:
-    name: adoptopenjdk8
+- name: Install JDKs
+  win_scoop:
+    name:
+      - adopt8-hotspot
+      - adopt11-hotspot
+      - adopt12-hotspot
 
-# LTS release
-- name: Install OpenJDK 11
-  win_chocolatey:
-    name: adoptopenjdk11
-
-# Current release
-- name: Install OpenJDK 12
-  win_chocolatey:
-    name: adoptopenjdk
+- name: Set default JDK
+  win_shell: 'scoop reset adopt8-hotspot'
 
 - name: Install maven
-  win_chocolatey:
+  win_scoop:
     name: maven
 
 - name: Install gradle
-  win_chocolatey:
+  win_scoop:
     name: gradle
-
-- name: Install jetty
-  win_chocolatey:
-    name: jetty
+# - name: Install jetty
+#   win_scoop:
+#     name: jetty
