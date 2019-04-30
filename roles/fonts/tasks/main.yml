@@ -1,0 +1,6 @@
+---
+- name: Install FiraCode
+  win_scoop:
+    name:
+      - FiraCode-NF
+      - FiraMono-NF
