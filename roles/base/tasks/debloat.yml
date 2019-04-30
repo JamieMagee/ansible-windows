@@ -24,6 +24,3 @@
     UnpinTaskbarIcons
   args:
     chdir: C:\Users\jamagee\Downloads\Win10-Initial-Setup-Script-master
-
-- name:
-  win_reboot:

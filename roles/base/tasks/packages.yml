@@ -1,0 +1,15 @@
+---
+- name: Install universal base packages
+  win_scoop:
+    name: '{{ base_packages }}'
+
+- name: Enable scoop buckets
+  win_shell: 'scoop bucket add {{ item }}'
+  with_items:
+    - 'extras'
+    - 'java'
+    - 'jetbrains'
+    - 'nerd-fonts'
+    - 'versions'
+  register: scoop_buckets
+  changed_when: "'already exists' not in scoop_buckets.stdout"

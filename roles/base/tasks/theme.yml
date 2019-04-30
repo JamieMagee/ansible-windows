@@ -1,0 +1,14 @@
+---
+- name: Copy the wallpaper
+  win_copy:
+    src: background.jpg
+    dest: C:\Users\jamagee\Pictures\background.jpg
+
+- name: Set the wallpaper
+  win_regedit:
+    path: HKCU:\Control Panel\Desktop
+    name: WallPaper
+    data: C:\Users\jamagee\Pictures\background.jpg
+
+- name: Refresh user profile
+  win_command: RUNDLL32.EXE USER32.DLL,UpdatePerUserSystemParameters ,1 ,True

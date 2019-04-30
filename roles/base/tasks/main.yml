@@ -1,19 +1,5 @@
 ---
-- include: debloat.yml
-
-- name: Copy the wallpaper
-  win_copy:
-    src: background.jpg
-    dest: C:\Users\jamagee\Pictures\background.jpg
-
-- name: Set the wallpaper
-  win_regedit:
-    path: HKCU:\Control Panel\Desktop
-    name: WallPaper
-    data: C:\Users\jamagee\Pictures\background.jpg
-
-- name: Refresh user profile
-  win_command: RUNDLL32.EXE USER32.DLL,UpdatePerUserSystemParameters ,1 ,True
+- include: packages.yml
 
 - name: Install all windows updates
   win_updates:
@@ -35,28 +21,3 @@
   win_chocolatey:
     name: all
     state: latest
-
-- name: Add PSWindowsUpdate
-  win_psmodule:
-    name: PSWindowsUpdate
-
-- name: Ensure WindowsPowerShell directory exists
-  win_file:
-    path: "C:\Users\{{ user.name }}\Documents\WindowsPowerShell"
-
-- name: Copy update script
-  win_copy:
-    src: updates.ps1
-    dest: C:\Users\jamagee\Documents\WindowsPowerShell\updates.ps1
-
-- name: Update the system daily
-  win_scheduled_task:
-    name: SystemUpdates
-    actions:
-      - path: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
-        arguments: -ExecutionPolicy Unrestricted -NonInteractive  C:\Users\jamagee\Documents\WindowsPowerShell\updates.ps1
-    triggers:
-      - type: daily
-        start_boundary: '2017-10-09T05:00:00'
-    username: SYSTEM
-    enabled: yes
