@@ -1,0 +1,12 @@
+---
+- name: Instamm Office 365
+  win_chocolatey:
+    name: office365proplus
+
+- name: Install Microsoft Teams
+  win_chocolatey:
+    name: microsoft-teams
+
+# - name: Install Power BI
+#   win_chocolatey:
+#     name: powerbi
