@@ -1,0 +1,5 @@
+---
+- name: Install IntelliJ IDEA
+  win_scoop:
+    name: IntelliJ-IDEA-Ultimate
+## TODO: Install plugins
