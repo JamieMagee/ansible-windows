@@ -3,7 +3,6 @@
   win_optional_feature:
     name: Microsoft-Windows-Subsystem-Linux
 
-- name: Download Arch Linux Appx
-  win_get_url:
-    url: https://github.com/yuk7/ArchWSL/releases/download/19.3.19.1/ArchWSL-AppX_19.3.19.1_x64.appx
-    dest: C:\Users\jamagee\Downloads\arch.appx
+- name: Install Arch Linux
+  win_scoop:
+    name: archwsl
