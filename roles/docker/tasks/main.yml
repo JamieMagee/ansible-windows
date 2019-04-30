@@ -1,0 +1,4 @@
+---
+- name: Install docker
+  win_scoop:
+    name: docker
