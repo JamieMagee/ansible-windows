@@ -1,0 +1,3 @@
+[submodule "library/win-scoop"]
+	path = library/win-scoop
+	url = https://github.com/JamieMagee/ansible-win-scoop
